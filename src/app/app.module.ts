@@ -8,6 +8,7 @@ import { FirstComponent } from './first/first.component';
 import { ProductsComponent } from './products/products.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AddProductComponent } from './add-product/add-product.component';
     FirstComponent,
     ProductsComponent,
     NavbarComponent,
-    AddProductComponent
+    AddProductComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

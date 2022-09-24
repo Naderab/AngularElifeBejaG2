@@ -27,15 +27,26 @@
 
 <div class="container">
     <div class="row">
-        <div class="card" style="width: 18rem;" *ngFor="let p of listProducts;let i = index">
+        <div class="col-md-3 col-xs-12 col-sm-6" *ngFor="let p of listProducts;let i = index">
+
+        <div class="card" style="width: 18rem;" >
             <img src={{p.picture}} class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{p.title}}</h5>
-              <p class="card-text">{{p.price}} DT</p>
-              <p class="card-text">{{p.quantity}}</p>
-              <p class="card-text">{{p.like}}</p>
-              <button class="btn btn-primary" [disabled]="p.quantity == 0" (click)="Buy(i)">BUY</button><button type="button" class="btn btn-success" (click)="Like(i)">LIKE</button>
+              <p class="card-text"><strong>Price :</strong>{{p.price}} DT</p>
+              <p class="card-text"><strong>Quantity :</strong>{{p.quantity}}</p>
+              <p class="card-text"><strong>Like :</strong>{{p.like}}</p>
+              <div class="actions">
+                <button class="btn btn-success" [disabled]="p.quantity == 0" (click)="Buy(i)">
+                Buy
+              </button>
+              &nbsp;&nbsp;
+              <button class="btn btn-primary" (click)="Like(i)">
+                Like
+              </button>
+              </div>
             </div>
+          </div>
           </div>
     </div>
 </div>

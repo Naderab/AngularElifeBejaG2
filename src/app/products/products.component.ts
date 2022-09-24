@@ -16,9 +16,9 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.listProducts=[
-      {id: '1', title: "T-shirt 1", price: 18, quantity: 0, like: 0,picture:'https://img-0.journaldunet.com/JgOAEEaKp00acGdrktPUB8Y2__8=/1500x/smart/32d90de13a5f411c86709152f70fc67c/ccmcms-jdn/10861192.jpg'},
-      {id: '2', title: "T-shirt 2", price: 21, quantity: 10, like: 0,picture:'https://img-0.journaldunet.com/JgOAEEaKp00acGdrktPUB8Y2__8=/1500x/smart/32d90de13a5f411c86709152f70fc67c/ccmcms-jdn/10861192.jpg'},
-      {id: '3', title: "T-shirt 3", price: 16, quantity: 8, like: 0,picture:'https://img-0.journaldunet.com/JgOAEEaKp00acGdrktPUB8Y2__8=/1500x/smart/32d90de13a5f411c86709152f70fc67c/ccmcms-jdn/10861192.jpg'}, ]
+      {id: '1', title: "T-shirt 1", price: 18, quantity: 0, like: 0,picture:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyYwnpCK3dNkY0k2uGPsCl8dQ3vCNgZFgtpg&usqp=CAU'},
+      {id: '2', title: "T-shirt 2", price: 21, quantity: 10, like: 0,picture:'https://cdn.shopify.com/s/files/1/0568/9527/5101/products/unisex-basic-softstyle-t-shirt-dark-heather-front-62490fcde0833_740x.jpg?v=1649166490'},
+      {id: '3', title: "T-shirt 3", price: 16, quantity: 8, like: 0,picture:'https://www.bfgcdn.com/1500_1500_90/016-2314-1711/sherpa-tarcho-tee-t-shirt.jpg'}, ]
   }
 
   public Buy(i:number): void {

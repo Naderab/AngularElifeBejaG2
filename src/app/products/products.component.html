@@ -1,0 +1,41 @@
+<!-- {{listProducts}}
+<h1>{{title}}</h1>
+<div >
+    Search : <input type="number" [(ngModel)]="prixMax">
+    {{prixMax}}
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>PRICE</th>
+        <th>QUANTITY</th>
+        <th>LIKE</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let p of listProducts;let i = index">
+        <div *ngIf="p.price<=prixMax">
+    <td>{{p.id}}</td>
+    <td>{{p.title}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.quantity}}</td>
+    <td>{{p.like}}</td>
+    <td><button class="btn btn-primary" [disabled]="p.quantity == 0" (click)="Buy(i)">BUY</button><button type="button" class="btn btn-success" (click)="Like(i)">LIKE</button></td>
+</div>    
+</tr>
+</table>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="card" style="width: 18rem;" *ngFor="let p of listProducts;let i = index">
+            <img src={{p.picture}} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{p.title}}</h5>
+              <p class="card-text">{{p.price}} DT</p>
+              <p class="card-text">{{p.quantity}}</p>
+              <p class="card-text">{{p.like}}</p>
+              <button class="btn btn-primary" [disabled]="p.quantity == 0" (click)="Buy(i)">BUY</button><button type="button" class="btn btn-success" (click)="Like(i)">LIKE</button>
+            </div>
+          </div>
+    </div>
+</div>

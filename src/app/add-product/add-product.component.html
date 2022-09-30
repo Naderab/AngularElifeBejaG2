@@ -1,1 +1,103 @@
-<p>add-product works!</p>
+<div class="container">
+  <h1>Add new product</h1>
+  <form
+    name="form"
+    #form="ngForm"
+    (ngSubmit)="onSubmit()"
+    class="needs-validation"
+    novalidate
+    style="margin-top: 20px"
+  >
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="mb-3">
+          <label class="form-label">Title :</label>
+          <input
+            class="form-control"
+            type="text"
+            name="title"
+            [(ngModel)]="product.title"
+            #title="ngModel"
+            required
+            minlength="3"
+            placeholder="Title ..."
+          />
+          <div
+            *ngIf="title.touched && title.invalid"
+            class="alert alert-danger"
+          >
+            <div *ngIf="title.errors?.required">Title is required</div>
+            <div *ngIf="title.errors?.minlength">
+              Title must have 3 character
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Price :</label>
+          <input
+            class="form-control"
+            type="number"
+            name="price"
+            [(ngModel)]="product.price"
+            placeholder="Price ..."
+            #price="ngModel"
+            required
+          />
+          <div
+            *ngIf="price.touched && price.invalid"
+            class="alert alert-danger"
+          >
+            Price is required !
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="mb-3">
+          <label class="form-label">Quantity :</label>
+          <input
+            class="form-control"
+            type="number"
+            name="quantity"
+            [(ngModel)]="product.quantity"
+            placeholder="Quantity ..."
+            #quantity="ngModel"
+            required
+          />
+          <div
+            *ngIf="quantity.touched && quantity.invalid"
+            class="alert alert-danger"
+          >
+            Quantity is required !
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Picture :</label>
+          <input
+            class="form-control"
+            type="text"
+            name="picture"
+            [(ngModel)]="product.picture"
+            placeholder="Picture ..."
+            #picture="ngModel"
+            required
+          />
+          <div
+            *ngIf="picture.touched && picture.invalid"
+            class="alert alert-danger"
+          >
+            Picture is required !
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="input-group mb-3">
+      <input
+        class="btn btn-primary mb-3"
+        type="submit"
+        value="Submit"
+        [disabled]="form.invalid"
+      />
+    </div>
+  </form>
+</div>

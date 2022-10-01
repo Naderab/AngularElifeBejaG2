@@ -37,6 +37,14 @@
               <p class="card-text"><strong>Quantity :</strong>{{p.quantity}}</p>
               <p class="card-text"><strong>Like :</strong>{{p.like}}</p>
               <div class="actions">
+                <button class="btn btn-danger" (click)="delete(p)">
+                  Delete
+                </button>
+                &nbsp;&nbsp;
+                <button class="btn btn-primary" [routerLink]="['/updateProduct',p.id]">
+                  Update
+                </button>
+                &nbsp;&nbsp;
                 <button class="btn btn-success" [disabled]="p.quantity == 0" (click)="Buy(i)">
                 Buy
               </button>

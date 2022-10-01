@@ -30,4 +30,8 @@ export class ProductsComponent implements OnInit {
   calcul() {
     alert("le nombre de produit ayant une quantité 0  = "+ this.calculService.getNumberOf(this.listProducts,"quantity",0));
   }
+
+  delete(product:Product):void {
+    this.productService.deleteProduct(product.id).subscribe(res=>console.log("product deleted successfully"))
+  }
 }

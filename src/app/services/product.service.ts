@@ -24,6 +24,19 @@ export class ProductService {
     return this.httpClient.get<Product[]>(this.productsUrl);
   }
   addProduct (product: Product): Observable<Product> {
+    product.like = 0;
     return this.httpClient.post<Product>(this.productsUrl, product,
     this.httpOptions);}
+
+  deleteProduct(id:any): Observable<any>{
+    return this.httpClient.delete<any>(this.productsUrl+'/'+id);
+  }
+
+  getProductById(id:any):Observable<Product>{
+    return this.httpClient.get<Product>(this.productsUrl+'/'+id);
+  }
+
+  updateProduct(id:any,product: Product): Observable<any>{
+    return this.httpClient.put(this.productsUrl+'/'+id,product,this.httpOptions);
+  }
 }

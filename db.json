@@ -10,26 +10,11 @@
     },
     {
       "id": 2,
-      "title": "Tshirt 2",
+      "title": "Tshirt 3",
       "price": 21,
       "quantity": 10,
       "like": 0,
       "picture": "https://www.mydesignation.com/wp-content/uploads/2019/08/malayali-tshirt-mydesignation-mockup-image-latest-golden-.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Tshirt 3",
-      "price": 16,
-      "quantity": 8,
-      "like": 0,
-      "picture": "https://content-management-files.canva.com/cdn-cgi/image/f=auto,q=70/2fdbd7ab-f378-4c63-8b21-c944ad2633fd/header_t-shirts2.jpg"
-    },
-    {
-      "title": "testApi",
-      "price": 10,
-      "quantity": 22,
-      "picture": "https://img.kytary.com/eshop_fr/velky_v2/na/637329305569630000/02260096/64771944/ant-tshirt-ant-blu-l.jpg",
-      "id": 4
     }
   ]
 }

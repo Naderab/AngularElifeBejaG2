@@ -17,8 +17,8 @@ export class AddProductComponent implements OnInit {
 
   onSubmit(){
     console.log(this.product);
-    this.productService.add(this.product);
-    this.router.navigateByUrl('/home');
+    this.productService.addProduct(this.product).subscribe((data)=>this.router.navigateByUrl('/home'));
+    
   }
 
 }

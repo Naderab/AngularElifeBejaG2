@@ -1,6 +1,7 @@
 import { typeWithParameters } from '@angular/compiler/src/render3/util';
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../core/product';
+import { CalculService } from '../services/calcul.service';
 
 @Component({
   selector: 'app-products',
@@ -12,7 +13,7 @@ export class ProductsComponent implements OnInit {
   listProducts: Product[]=[];
   title :string = "Product List";
   prixMax:number = 0;
-  constructor() { }
+  constructor(private calculService:CalculService) { }
 
   ngOnInit(): void {
     this.listProducts=[
@@ -28,5 +29,7 @@ export class ProductsComponent implements OnInit {
   public Like(i:number): void {
     this.listProducts[i].like = this.listProducts[i].like +1 ;
   }
-
+  calcul() {
+    alert("le nombre de produit ayant une quantité 0  = "+ this.calculService.getNumberOf(this.listProducts,"quantity",0));
+  }
 }

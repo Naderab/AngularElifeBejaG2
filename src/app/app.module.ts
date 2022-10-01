@@ -9,6 +9,7 @@ import { ProductsComponent } from './products/products.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ProductsComponent,
     NavbarComponent,
     AddProductComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,

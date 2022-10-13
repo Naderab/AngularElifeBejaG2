@@ -16,5 +16,14 @@
       "like": 0,
       "picture": "https://www.mydesignation.com/wp-content/uploads/2019/08/malayali-tshirt-mydesignation-mockup-image-latest-golden-.jpg"
     }
+  ],
+  "users": [
+    {
+      "firstName": "khlifa",
+      "lastName": "benfelten",
+      "email": "nader.abdellaoui@esprit.tn",
+      "picture": "https://img.freepik.com/psd-gratuit/devant-t-shirt-noir-isole_125540-1167.jpg?w=2000",
+      "id": 1
+    }
   ]
 }

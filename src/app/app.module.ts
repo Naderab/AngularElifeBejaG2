@@ -10,7 +10,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { UsersComponent } from './users/users.component';
+import { AddUserComponent } from './add-user/add-user.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import {HttpClientModule} from '@angular/common/http'
     NavbarComponent,
     AddProductComponent,
     NotFoundComponent,
-    TodoListComponent
+    TodoListComponent,
+    UsersComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
